@@ -1,0 +1,71 @@
+@use "variaveis";
+
+.hero {
+  padding: 5.6vw;
+  min-height: 80vh;
+  background-image: url(../images/hero_desktop.png);
+  text-align: center;
+  background-size: cover;
+
+  @media (max-width: variaveis.$screenTablet) {
+    background-image: url(../images/hero_tablet.png);
+    padding-top: calc(40vw + 35px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -35px;
+    min-height: 50vh;
+  }
+
+  &__content {
+    max-width: 640px;
+
+    @media (max-width: variaveis.$screenTablet) {
+      max-width: 100%;
+
+      .text--small {
+        font-size: 12px;
+      }
+
+      .button {
+        width: 40%;
+      }
+    }
+
+    @media (max-width: variaveis.$screenMobile) {
+      .button {
+        width: 60%;
+      }
+    }
+
+    &__branding {
+      max-width: 380px;
+      margin: 0 auto 38px;
+
+      @media (max-width: variaveis.$screenTablet) {
+        max-width: 200px;
+        margin: 0 auto;
+      }
+
+      img {
+        // display: flex;
+        // justify-content: space-between;
+        // height: 360px;
+        max-width: 100%;
+      }
+    }
+
+    .title--small {
+      margin-bottom: 64px;
+
+      @media (max-width: variaveis.$screenTablet) {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
+
+      @media (max-width: variaveis.$screenTablet) {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

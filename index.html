@@ -9,7 +9,119 @@
 </head>
 
 <body>
-    <h1>Olá</h1>
+    <header class="header">
+        <div class="header__container">
+            <h1>
+                <img class="header__logo" src="./dist/images/john-wick.png" alt="John Wick">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="button button--dark">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__content__branding">
+                <img src="./dist/images/john-wick.png" alt="John Wick">
+            </div>
+            <h3 class="title--small">
+                A coleção de John Wick em um só lugar.
+            </h3>
+            <button class="button">Assine Agora</button>
+            <p class="text--small">
+                *Assinatura disponível apenas por esta plataforma.
+            </p>
+        </div>
+    </section>
+    <section class="collection">
+        <h3 class="title">
+            Aproveite a melhor coleção
+        </h3>
+        <ul class="collection__list">
+            <li class="collection__list__item"><img src="./src/images/collection/john_wick-1.png"
+                    alt="John Wick Chapter 1"></li>
+            <li class="collection__list__item"><img src="./src/images/collection/john_wick-2.png"
+                    alt="John Wick Chapter 2"></li>
+            <li class="collection__list__item"><img src="./src/images/collection/john_wich-3.png"
+                    alt="John Wick Chapter 3"></li>
+            <li class="collection__list__item"><img src="./src/images/collection/john_wick-4.png"
+                    alt="John Wick Chapter 4"></li>
+        </ul>
+    </section>
+    <section class="devices">
+        <img src="dist/images/devices/all_devices.png" alt="Tv, tablet e celular">
+        <div class="devices__text_container">
+            <h2 class="title">Assista onde quiser</h2>
+            <p class="text--big">
+                Aproveite a tela grande da TV ou assista no tablet, laptop, celular e outros aparelhos. Nossa seleção de
+                títulos em 4K não para de crescer. Além disso, para a felicidade de todos, é possível assistir em até 4
+                telas ao mesmo tempo.
+            </p>
+
+        </div>
+    </section>
+    <section class="faq">
+        <h2 class="title">Perguntas frequentes</h2>
+        <ul class="faq__questions">
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    O que é John Wick - Collection?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    A John Wick - Collection é um serviço de streaming que oferece todos os filmes da franquia John
+                    Wick.<br><br>Você pode assistir a quantas vezes quiser e onde quiser – tudo por um
+                    preço mensal acessível. Aqui você sempre encontra novidades.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Onde posso assitir?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    Assista onde quiser, quando quiser. Faça login com sua conta em johnwick-collection.vercel.app para
+                    começar a assistir no computador ou em qualquer aparelho conectado à Internet compatível com o
+                    aplicativo, como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.
+                </div>
+            </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    Como faço para cancelar?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    A John Wick é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na
+                    internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua
+                    assinatura a qualquer momento.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./dist/images/john-wick.png" alt="John Wick">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Termos e aviso de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="" class="text--small">Envie-nos comentários</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Ajuda</a>
+                </li>
+            </ul>
+            <p class="text--small">
+                ® 2023 John Wick. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/src/scripts/main.js"></script>
 </body>
 
 </html>

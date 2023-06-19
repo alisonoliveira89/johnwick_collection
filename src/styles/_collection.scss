@@ -1,0 +1,39 @@
+@use "variaveis";
+
+.collection {
+  padding: 2vw 5.6vw;
+  min-height: 50vh;
+
+  border-top: 0.5rem inset rgb(136, 136, 136);
+
+  h3 {
+    text-align: center;
+
+    @media (max-width: variaveis.$screenMobile) {
+      font-size: 20px;
+    }
+  }
+
+  &__list {
+    margin-top: 36px;
+    display: grid;
+    //justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @media (max-width: variaveis.$screenMobile) {
+      margin-top: 16px;
+    }
+
+    @media (max-width: variaveis.$screenTablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      img {
+        max-width: 100%;
+        border-radius: 4px;
+      }
+    }
+  }
+}

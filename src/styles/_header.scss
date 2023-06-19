@@ -1,0 +1,64 @@
+@use "variaveis";
+
+.header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: variaveis.$colorBody;
+
+  &--is-hidden {
+    background-color: transparent;
+
+    .header {
+      &__logo,
+      &__links__item:first-child {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__container {
+    padding: 0 36px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: variaveis.$screenMobile) {
+      padding: 0 24px;
+    }
+  }
+
+  &__logo {
+    max-width: 160px;
+    width: 100%;
+    margin: 5px;
+    transition: opacity 0.5s ease;
+    margin-top: 16px;
+
+    @media (max-width: variaveis.$screenMobile) {
+      max-width: 80px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    &__item {
+      margin: 5px;
+      transition: opacity 0.5s ease;
+    }
+  }
+
+  .button {
+    height: 50px;
+
+    @media (max-width: variaveis.$screenMobile) {
+      font-size: 12px;
+      padding: 8px 10px;
+      height: 40px;
+      letter-spacing: 0;
+    }
+  }
+}
