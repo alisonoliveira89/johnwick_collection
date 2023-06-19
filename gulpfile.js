@@ -31,17 +31,18 @@ function images() {
     .pipe(gulp.dest("./dist/images"));
 }
 
-// exports.default = gulp.parallel(styles, images);
-// exports.watch = function () {
-//   gulp.watch("./src/styles/*.scss", gulp.parallel(styles));
-// };
+exports.default = gulp.parallel(styles, images, scripts);
 
-exports.default = function () {
-  gulp.watch(
-    "./src/styles/*.scss",
-    { ignoreInitial: false },
-    gulp.series(styles)
-  );
-  gulp.watch("./src/images/*", { ignoreInitial: false }, gulp.series(images));
-  gulp.watch("./src/scripts/*", { ignoreInitial: false }, gulp.series(scripts));
+exports.watch = function () {
+  gulp.watch("./src/styles/*.scss", gulp.parallel(styles));
+  gulp.watch("./src/scripts/*.js", gulp.parallel(scripts));
 };
+// exports.default = function () {
+//   gulp.watch(
+//     "./src/styles/*.scss",
+//     { ignoreInitial: false },
+//     gulp.series(styles)
+//   );
+//   gulp.watch("./src/images/*", { ignoreInitial: false }, gulp.series(images));
+//   gulp.watch("./src/scripts/*", { ignoreInitial: false }, gulp.series(scripts));
+// };
